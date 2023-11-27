@@ -10,7 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+//import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.Dimension;
@@ -78,6 +78,7 @@ public class D3Test {
     driver.get("http://localhost:8080/");
     {
       WebElement element = driver.findElement(By.cssSelector("li:nth-child(3) > img"));
+      //assertNotNull("Element not found", element);
       String attribute = element.getAttribute("src");
       vars.put("img", attribute);
     }
